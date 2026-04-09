@@ -2,28 +2,187 @@
 <html>
 <head>
   <title>Aryan Does Fitness</title>
+
   <style>
     body {
-      font-family: Arial;
-      text-align: center;
-      padding: 50px;
+      margin: 0;
+      font-family: Arial, sans-serif;
       background: #0f0f0f;
       color: white;
     }
-    button {
-      padding: 15px 25px;
-      font-size: 16px;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 50px;
+      align-items: center;
+      border-bottom: 1px solid #222;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+    }
+
+    .hero p {
+      color: #aaa;
+      font-size: 18px;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 15px 30px;
       background: white;
       color: black;
       border: none;
       border-radius: 8px;
       cursor: pointer;
     }
+
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 25px;
+      width: 260px;
+      border-radius: 10px;
+    }
+
+    input, textarea {
+      width: 300px;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    footer {
+      padding: 40px;
+      text-align: center;
+      color: #777;
+      border-top: 1px solid #222;
+    }
+
+    img {
+      width: 250px;
+      border-radius: 10px;
+    }
+
   </style>
 </head>
+
 <body>
-  <h1>Aryan Does Fitness</h1>
+
+<header>
+  <h2>Aryan Does Fitness</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#results">Results</a>
+    <a href="#apply">Apply</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Build Elite Athleticism</h1>
   <p>Helping athletes get faster, stronger, and more explosive.</p>
-  <button>Coaching Coming Soon</button>
+
+  <button class="btn" onclick="document.getElementById('apply').scrollIntoView()">
+    Apply For Coaching
+  </button>
+</section>
+
+<section class="section" id="services">
+  <h2>What You Get</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Speed Training</h3>
+      <p>Explosive acceleration & sprint mechanics.</p>
+    </div>
+
+    <div class="card">
+      <h3>Strength Programs</h3>
+      <p>Build real, usable strength for sport.</p>
+    </div>
+
+    <div class="card">
+      <h3>Explosiveness</h3>
+      <p>Jump higher, move faster, dominate.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="results">
+  <h2>Client Results</h2>
+
+  <div class="cards">
+    <div>
+      <img src="https://via.placeholder.com/250" />
+      <p>+6cm vertical jump</p>
+    </div>
+
+    <div>
+      <img src="https://via.placeholder.com/250" />
+      <p>Faster 40m sprint</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Join The Team</h2>
+  <p>Enter your email to get training tips & early access</p>
+
+  <form action="https://formspree.io/f/mayvlqav" method="POST">
+    <input type="email" name="email" placeholder="Your email" required><br>
+    <button class="btn">Join</button>
+  </form>
+</section>
+
+<section class="section" id="apply">
+  <h2>Apply For Coaching</h2>
+
+  <form action="https://formspree.io/f/mayvlqav" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required><br>
+    <input type="number" name="age" placeholder="Your Age" required><br>
+    <input type="text" name="sport" placeholder="Your Sport" required><br>
+    <textarea name="goal" placeholder="Your Goal"></textarea><br>
+
+    <button class="btn">Submit Application</button>
+  </form>
+</section>
+
+<section class="section">
+  <h2>Or DM Me Directly</h2>
+
+  <button class="btn" onclick="window.location.href='https://instagram.com/aryandoesfitness'">
+    Message Me
+  </button>
+</section>
+
+<footer>
+  © 2026 Aryan Does Fitness
+</footer>
+
 </body>
 </html>
